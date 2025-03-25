@@ -1,6 +1,6 @@
-ARM Linux Hello World
+ARM Linux Show Current Time
 =====================
-Simple "Hello World!" application, print message on the console
+Simple application, print current time on the console
 
 Dependencies
 ============
