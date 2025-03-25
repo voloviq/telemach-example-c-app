@@ -1,0 +1,26 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "C/C++ Runner: Debug Session",
+      "type": "cppdbg",
+      "request": "launch",
+      "args": [],
+      "stopAtEntry": false,
+      "externalConsole": false,
+      "cwd": "${workspaceFolder}",
+      "program": "${workspaceFolder}/helloworld",
+      "MIMode": "gdb",
+      "miDebuggerPath": "gdb-multiarch.exe",
+      "miDebuggerServerAddress": "192.168.7.1:3333",
+      "setupCommands": [
+        {
+            "description": "gdb",
+            "text": "-enable-pretty-printing",
+            "ignoreFailures": true
+        }
+    ],
+        "targetArchitecture": "arm"  // Specifies the ARM architecture
+    }
+  ]
+}
