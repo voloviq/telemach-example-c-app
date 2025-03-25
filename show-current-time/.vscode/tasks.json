@@ -1,0 +1,55 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Echo start message",
+            "type": "shell",
+            "command": "echo",
+            "args": [
+                "Starting the process: Copying binary and launching gdbserver..."
+            ],
+            "problemMatcher": [],
+        },
+        {
+            "label": "Change attributes of binary on remote",
+            "type": "shell",
+            "command": "ssh root@192.168.7.1 'nohup chmod +x /home/root/showtime > /dev/null 2>&1 &'",
+            "problemMatcher": [],
+            "dependsOn": [
+                "Copy binary to remote"
+            ]
+        },
+        {
+            "label": "Copy binary to remote",
+            "type": "shell",
+            "command": "scp",
+            "args": [
+                "${workspaceFolder}/out/showtime",
+                "root@192.168.7.1:/home/root/showtime"
+            ],
+            "problemMatcher": [],
+            "dependsOn": [
+                "Echo start message",
+            ],
+        },
+        {
+            "label": "Start gdbserver on remote",
+            "type": "shell",
+            "command": "ssh root@192.168.7.1 'nohup gdbserver :3333 /home/root/showtime > /dev/null 2>&1 &'",
+            "problemMatcher": [],
+            "dependsOn": [
+                "Change attributes of binary on remote",
+            ],
+        },
+        {
+            "label": "Stop gdbserver on remote",
+            "type": "shell",
+            "command": "ssh root@192.168.7.1 'killall gdbserver'",
+            "problemMatcher": [],
+            "presentation": {
+                "reveal": "always",
+                "panel": "new"
+            }
+        }
+    ]
+}
