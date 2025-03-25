@@ -11,7 +11,7 @@
       "cwd": "${workspaceFolder}",
       "program": "${workspaceFolder}/helloworld",
       "MIMode": "gdb",
-      "miDebuggerPath": "gdb-multiarch.exe",
+      "miDebuggerPath": "gdb-multiarch",
       "miDebuggerServerAddress": "192.168.7.1:3333",
       "setupCommands": [
         {

@@ -1,4 +1,5 @@
-CC=arm-none-linux-gnueabihf-g++
+#CC=arm-none-linux-gnueabihf-g++
+CC=arm-linux-gnueabihf-gcc
 CFLAGS=-g
 CPPFLAGS= -Wall -std=c++11 -I./
 EXEC_NAME=helloworld

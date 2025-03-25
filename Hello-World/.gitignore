@@ -5,6 +5,7 @@
 
 # Node artifact files
 /build/*
+helloworld
 
 # Prerequisites
 *.d

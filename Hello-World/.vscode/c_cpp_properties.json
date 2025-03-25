@@ -1,11 +1,11 @@
 {
   "configurations": [
     {
-      "name": "Win32",
+      "name": "Linux",
       "includePath": [
         "${workspaceFolder}/**"
       ],
-      "compilerPath": "C:\\Users\\michw\\Toolchains\\gcc-arm-10.2-2020.11-mingw-w64-i686-arm-none-linux-gnueabihf\\bin\\arm-none-linux-gnueabihf-gcc.exe",
+      "compilerPath": "arm-linux-gnueabihf-gcc",
       "cStandard": "${default}",
       "cppStandard": "${default}",
       "intelliSenseMode": "gcc-arm",

@@ -1,7 +1,7 @@
 {
-  "C_Cpp_Runner.cCompilerPath": "arm-none-linux-gnueabihf-gcc",
-  "C_Cpp_Runner.cppCompilerPath": "arm-none-linux-gnueabihf-g++",
-  "C_Cpp_Runner.debuggerPath": "arm-none-linux-gnueabihf-gdb",
+  "C_Cpp_Runner.cCompilerPath": "arm-linux-gnueabi-gcc",
+  "C_Cpp_Runner.cppCompilerPath": "arm-linux-gnueabi-g++",
+  "C_Cpp_Runner.debuggerPath": "arm-linux-gnueabi-gdb",
   "C_Cpp_Runner.cStandard": "",
   "C_Cpp_Runner.cppStandard": "",
   "C_Cpp_Runner.msvcBatchPath": "",
