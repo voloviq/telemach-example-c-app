@@ -3,7 +3,8 @@ Collection of simple application for STM32MP15x
 
 List of examples
 ============
-* Hello World !
+* hello-world
+* show-current-time
 
 Mission of the example projects
 ====================
