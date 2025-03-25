@@ -1,32 +1,10 @@
-ARM Linux Hello World
+Collection of simple application for STM32MP15x
 =====================
-Simple "Hello World!" application, print message on the console
 
-Dependencies
+List of examples
 ============
-* Windows 11
-* [arm-ostl-linux-gnueabi-gcc](https://sysprogs.com/getfile/2191/stm32mp1-gcc12.3.0.exe)
+* Hello World !
 
-Install Dependencies
+Mission of the example projects
 ====================
-```
-Unpack somewhere into a disk and set path in "Edit the system environment variables"
-```
-
-Build
-=====
-```
-make
-```
-
-Copy
-====
-```
-make copy
-```
-
-Clean
-====
-```
-make clean
-```
+Main goal is to show how to create, copy to embedded device the applications and finally debug
