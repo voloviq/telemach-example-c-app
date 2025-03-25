@@ -1,0 +1,42 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Echo start message",
+            "type": "shell",
+            "command": "echo",
+            "args": [
+                "Starting the process: Copying binary and launching gdbserver..."
+            ],
+            "problemMatcher": []
+        },
+        {
+            "label": "Copy binary to remote",
+            "type": "shell",
+            "command": "scp",
+            "args": [
+                "${workspaceFolder}/helloworld",
+                "root@192.168.7.1:/home/root/helloworld"
+            ],
+            "problemMatcher": [],
+            "dependsOn": "Echo start message",
+        },
+        {
+            "label": "Start gdbserver on remote",
+            "type": "shell",
+            "command": "ssh root@192.168.7.1 'nohup gdbserver :3333 /home/root/helloworld > /dev/null 2>&1 &'",
+            "problemMatcher": [],
+            "dependsOn": "Copy binary to remote"
+        },
+        {
+            "label": "Stop gdbserver on remote",
+            "type": "shell",
+            "command": "ssh root@192.168.7.1 'killall gdbserver'",
+            "problemMatcher": [],
+            "presentation": {
+                "reveal": "always",
+                "panel": "new"
+            }
+        }
+    ]
+}
