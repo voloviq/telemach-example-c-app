@@ -5,7 +5,9 @@ Collection of the simple applications for STM32MP15x for A7 core
 The necessary applications need to be installed first
 ============
 * Compiler <br>
-https://sysprogs.com/getfile/2191/stm32mp1-gcc12.3.0.exe
+https://sysprogs.com/getfile/2191/stm32mp1-gcc12.3.0.exe <br>
+    Note: Add in windows environment PATH a new record <br>
+    C:\SysGCC\stm32mp1\i686-w64-mingw32\usr\bin\arm-ostl-linux-gnueabi\
 * Visual Studio Code <br>
 https://code.visualstudio.com/docs/?dv=win64user
 * For Visual Studio Code it is necessary to install following extensions <br>
