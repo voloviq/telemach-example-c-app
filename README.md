@@ -2,7 +2,7 @@ Collection of the simple applications for STM32MP15x for A7 core
 =====================
 #### Following examples were created to be compiled under Windows 11 or 10(but not tested)
 
-Necessary application need to be installed first
+The necessary applications need to be installed first
 ============
 * Compiler <br>
 https://sysprogs.com/getfile/2191/stm32mp1-gcc12.3.0.exe
@@ -29,4 +29,4 @@ Open project in Visual Studio Code
 
 Mission of the example projects
 ====================
-Main goal is to show how to create, copy to embedded device the applications and finally debug
+The main goal is to demonstrate how to create applications, transfer them to an embedded device, and debug them effectively
