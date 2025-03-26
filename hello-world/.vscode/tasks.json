@@ -8,25 +8,38 @@
             "args": [
                 "Starting the process: Copying binary and launching gdbserver..."
             ],
-            "problemMatcher": []
+            "problemMatcher": [],
+        },
+        {
+            "label": "Change attributes of binary on remote",
+            "type": "shell",
+            "command": "ssh root@192.168.7.1 'nohup chmod +x /home/root/helloworld > /dev/null 2>&1 &'",
+            "problemMatcher": [],
+            "dependsOn": [
+                "Copy binary to remote"
+            ]
         },
         {
             "label": "Copy binary to remote",
             "type": "shell",
             "command": "scp",
             "args": [
-                "${workspaceFolder}/helloworld",
+                "${workspaceFolder}/out/helloworld",
                 "root@192.168.7.1:/home/root/helloworld"
             ],
             "problemMatcher": [],
-            "dependsOn": "Echo start message",
+            "dependsOn": [
+                "Echo start message",
+            ],
         },
         {
             "label": "Start gdbserver on remote",
             "type": "shell",
             "command": "ssh root@192.168.7.1 'nohup gdbserver :3333 /home/root/helloworld > /dev/null 2>&1 &'",
             "problemMatcher": [],
-            "dependsOn": "Copy binary to remote"
+            "dependsOn": [
+                "Change attributes of binary on remote",
+            ],
         },
         {
             "label": "Stop gdbserver on remote",
@@ -37,6 +50,19 @@
                 "reveal": "always",
                 "panel": "new"
             }
+        },
+        {
+            "label": "Start Debugging",
+            "type": "shell",
+            "command": "echo Starting Debugging...",
+            "problemMatcher": [],
+            "dependsOn": ["Debug Task"]
+        },
+        {
+            "label": "Debug Task",
+            "type": "shell",
+            "command": "code --command workbench.action.debug.start",
+            "problemMatcher": []
         }
     ]
 }

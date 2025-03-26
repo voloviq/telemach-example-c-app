@@ -1,15 +1,19 @@
 CC=arm-ostl-linux-gnueabi-gcc
 CFLAGS=-g -Wall -I./ -mthumb -mfpu=neon-vfpv4 -mfloat-abi=hard -mcpu=cortex-a7 -O2 --sysroot=C:\SysGCC\stm32mp1\cortexa7t2hf-neon-vfpv4-ostl-linux-gnueabi
 EXEC_NAME=helloworld
+BUILD_DIR=out
 
-.PHONY: build clean
+.PHONY: build clean copy
 
-build: helloworld.c
-	$(CC) $(CFLAGS) -o $(EXEC_NAME) helloworld.c
+build: ${BUILD_DIR} helloworld.c
+	$(CC) $(CFLAGS) -o ${BUILD_DIR}/$(EXEC_NAME) helloworld.c
+
+${BUILD_DIR}:
+	mkdir -p ${BUILD_DIR}
 
 clean:
-	rm -rf $(EXEC_NAME)
+	rm -rf ${BUILD_DIR}/$(EXEC_NAME) ${BUILD_DIR}/
 
 copy:
-	scp $(EXEC_NAME) root@192.168.7.1:/home/root
-
+	scp ${BUILD_DIR}/$(EXEC_NAME) root@192.168.7.1:/home/root
+	ssh root@192.168.7.1 nohup chmod +x /home/root/showtime > /dev/null 2>&1 &

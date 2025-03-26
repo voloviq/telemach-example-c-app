@@ -13,7 +13,7 @@ int main(int argc, char *argv[])
     time_t now = time(NULL);
     struct tm *local_time = localtime(&now);
 
-    printf("Hello World! Current time: %02d:%02d:%02d\n",
+    printf("The Current time: %02d:%02d:%02d\n",
         local_time->tm_hour, local_time->tm_min, local_time->tm_sec);
 
     return 0; 

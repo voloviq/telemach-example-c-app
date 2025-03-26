@@ -8,7 +8,7 @@
         "stopAtEntry": true,
         "externalConsole": false,
         "cwd": "${workspaceFolder}",
-        "program": "${workspaceFolder}/helloworld",
+        "program": "${workspaceFolder}/out/helloworld",
         "MIMode": "gdb",
         "miDebuggerPath": "arm-ostl-linux-gnueabi-gdb",
         "miDebuggerServerAddress": "192.168.7.1:3333",
@@ -31,7 +31,6 @@
         ],
         "targetArchitecture": "arm",
         "preLaunchTask": "Start gdbserver on remote",
-        //"postDebugTask": "Stop gdbserver on remote",
       }
     ]
   }

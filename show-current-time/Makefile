@@ -16,4 +16,4 @@ clean:
 
 copy:
 	scp ${BUILD_DIR}/$(EXEC_NAME) root@192.168.7.1:/home/root
-
+	ssh root@192.168.7.1 nohup chmod +x /home/root/showtime > /dev/null 2>&1 &

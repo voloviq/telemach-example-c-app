@@ -1,5 +1,29 @@
 {
+    // Better Status Bar
+    "betterStatusBar.defaultColor": "statusBar.foreground",
+    "betterStatusBar.configurationFile": "true",
+    "betterStatusBar.loadNpmCommands": false,
+    "betterStatusBar.commands": [
+        {
+          "id": "1",
+          "label": "Build",
+          "command": "make clean; make build",
+          "color": "green"
+        },
+        {
+          "id": "2",
+          "label": "Clean",
+          "command": "make clean",
+          "color": "red"
+        },
+        {
+          "id": "3",
+          "label": "Copy",
+          "command": "make copy",
+          "color": "gray"
+        },
+      ],
     "files.associations": {
-        "ctime": "c"
-    }
+      "helloworld.c": "c",
+    },
 }
